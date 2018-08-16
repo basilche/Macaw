@@ -1,4 +1,4 @@
-<img src="https://image.ibb.co/jHXuWK/macaw_cover.png" alt="macaw_cover" border="0">
+<img src="https://image.ibb.co/jHXuWK/macaw_cover.png" alt="macaw_cover" border="0" align="center">
 
 [![CI Status](https://travis-ci.org/exyte/Macaw.svg?style=flat)](https://travis-ci.org/exyte/Macaw) [![Version](https://img.shields.io/cocoapods/v/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-0473B3.svg?style=flat)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/cocoapods/l/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw) [![Platform](https://img.shields.io/cocoapods/p/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw)
 
@@ -35,7 +35,7 @@ Add the following dependency to the Cartfile: `github "Exyte/Macaw" ~> 0.9.2`
 
 For more details refer to [Getting Started Tutorial](https://github.com/exyte/Macaw/wiki/Getting-started)
 
-#### Example:
+#### Example
 
 ```override func viewDidAppear() {
         super.viewDidAppear()
@@ -80,7 +80,7 @@ For more details refer to [Getting Started Tutorial](https://github.com/exyte/Ma
     }
 ```
 
-<img src="https://image.ibb.co/eCPWfp/Screen_Shot_2018_08_16_at_12_16_56.png" alt="Screen_Shot_2018_08_16_at_12_16_56" border="0" align="middle" alt="Macaw_example_hexagons">
+<img src="https://image.ibb.co/eCPWfp/Screen_Shot_2018_08_16_at_12_16_56.png" alt="Screen_Shot_2018_08_16_at_12_16_56" border="0" align="center" alt="Macaw_example_hexagons">
 
 #### Build from sources
 * clone the repo `git@github.com:exyte/Macaw.git`
