@@ -37,20 +37,50 @@ For more details refer to [Getting Started Tutorial](https://github.com/exyte/Ma
 
 Example:
 
-```swift
-clalet rect = Shape(
-            form: RoundRect(rect: Rect(w: 60, h: 60), rx: 5, ry: 5),
-            fill: Color(val: 0xCED4E4),
-            place: .move(dx: 30, dy: 150)
-        )
+```override func viewDidAppear() {
+        super.viewDidAppear()
         
-        rect.placeVar.animation(to: .move(dx: distance + rect.place.dx, dy: rect.place.dy), during: 0.5).autoreversed().cycle().play()
+        view.window?.setFrame(NSRect(x: 0, y: 0, width: 1000, height: 1000), display: true)
         
-let group = Group(contents: [circle, rect])
-super.init(node: group, coder: aDecoder)
+        let svgView = SVGView(frame: NSRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        svgView.backgroundColor = .white
+        svgView.contentLayout = .none
+        view.addSubview(svgView)
+        
+        let hex = MoveTo(x: 15, y: -26)
+            .L(-15, -26)
+            .L(-30, 0)
+            .L(-15, 26)
+            .L(15, 26)
+            .L(30, 0).build()
+        
+        let red = Color(val: 0xFF0000).with(a: 0.5)
+        let pink = Color(val: 0xCC1496).with(a: 0.5)
+        let purple = Color(val: 0x993D7E).with(a: 0.5)
+        let green = Color(val: 0x40FFB7).with(a: 0.5)
+        let blue = Color(val: 0x14CCCC).with(a: 0.5)
+        let swamp = Color(val: 0x3D9999).with(a: 0.5)
+        
+        let wStep = 60.0
+        let hStep = 10.0
+        let delta = 20.0
+        
+        let shapes = [Shape(form: hex, fill: red, place: .move(dx: 0, dy: hStep)),
+                      Shape(form: hex, fill: pink, place: .move(dx: delta, dy: 0)),
+                      Shape(form: hex, fill: purple, place: .move(dx: wStep, dy: hStep)),
+                      Shape(form: hex, fill: green, place: .move(dx: delta + wStep, dy: 0)),
+                      Shape(form: hex, fill: blue, place: .move(dx: 2*wStep, dy: hStep)),
+                      Shape(form: hex, fill: swamp, place: .move(dx: delta + 2*wStep, dy: 0)),
+                      Shape(form: hex, fill: red, place: .move(dx: 3*wStep, dy: hStep)),
+                      Shape(form: hex, fill: pink, place: .move(dx: delta + 3*wStep, dy: 0))]
+        
+        let g = Group(contents: shapes, place: .move(dx: 100, dy: 100))
+        
+        svgView.node = g
+    }
 ```
 
-<img src="http://i.imgur.com/ffPc4mr.png" width="475" align="middle">
+<img src="https://image.ibb.co/eCPWfp/Screen_Shot_2018_08_16_at_12_16_56.png" alt="Screen_Shot_2018_08_16_at_12_16_56" border="0" align="middle" alt="Macaw_example_hexagons">
 
 #### Build from sources
 * clone the repo `git@github.com:exyte/Macaw.git`
