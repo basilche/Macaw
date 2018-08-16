@@ -1,20 +1,21 @@
 # Contributing
 
-_When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change._ 
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Pull Request Process
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+1. If you don’t have linter installed - type “brew install swiftlint” into console.
+
+2. Launch Macaw.xcodeproj.
+
+3. Run tests (target MacawTests, Command + U), linter will launch automatically and fix formatting for you.
+
+4. Remember that if you decide to add new files, and add them to developer pod Macaw through Example.xcworkspace, they will not be included in actual Macaw.xcodeproj. You will have to do that manually
+
+5. Also keep in mind that you can't use things like UIView - replace them with MView (which is a typedef for both macOS and iOS)
 
 ## Code of Conduct
 
