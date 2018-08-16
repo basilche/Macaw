@@ -35,7 +35,7 @@ Add the following dependency to the Cartfile: `github "Exyte/Macaw" ~> 0.9.2`
 
 For more details refer to [Getting Started Tutorial](https://github.com/exyte/Macaw/wiki/Getting-started)
 
-Example:
+#### Example:
 
 ```override func viewDidAppear() {
         super.viewDidAppear()
