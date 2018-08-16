@@ -2,20 +2,21 @@
 
 [![CI Status](https://travis-ci.org/exyte/Macaw.svg?style=flat)](https://travis-ci.org/exyte/Macaw) [![Version](https://img.shields.io/cocoapods/v/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-0473B3.svg?style=flat)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/cocoapods/l/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw) [![Platform](https://img.shields.io/cocoapods/p/Macaw.svg?style=flat)](http://cocoapods.org/pods/Macaw)
 
-Macaw provides primitives, visual effects, and animations for two-dimensional drawing across macOS and iOS.  It allows you to convert designs into scalable native views, fitting different screens. It is also open source (surprise-surprise) and regularly updated.
 
 ### Key Features
 
+* two-dimensional drawing across macOS and iOS
 * SVG rendering
 * scene serialization and scene deserialization into an SVG or Macaw file
-* scene may include multiple responsive objects
+* scene graph includes multiple responsive nodes
 * creating shapes in CGGraphicContext in a reasonably easy way
 * friendly interface for CAAnimation 
 * Macaw carefully handles changes in public API, which insures compiling even of a very old code you'd written with Macaw
 
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
